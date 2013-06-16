@@ -12,6 +12,18 @@ class WikiTag
         "<i>"+ string + "</i>"
       end
     end
-    # "#{greeting} TDD BootCamp!"
+
+  end
+  def change_bold(string)
+    if string =~ /^\**\*/
+      string.gsub!(/^\*/,'')
+      string.gsub!(/\*$/,'')
+      
+      if string.empty?
+        return ""
+      else
+        "<strong>"+ string + "</strong>"
+      end
+    end
   end
 end
